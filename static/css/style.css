@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html,
+body {
+    height: 100%;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+header {
+    min-height: 10em;
+}
+.content {
+    flex: 1 0 auto;
+}
+footer {
+    flex: 0 0 auto;
+    min-height: 5em;
+    margin-top: 3em;
+}
+body {
+    background: linear-gradient(108deg, #ee7752, #e73c7e, #a350cc, #23a6d5, #23d5ab, #f5ef49);
+    background-size: 400% 400%;
+    animation: gradient 35s ease infinite;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}

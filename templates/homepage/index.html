@@ -15,12 +15,14 @@
 {% for miniapp in miniapps %}
        <div class="col">
 
-           <div class="card text-black marti-cards" style="max-width: 18rem; min-height: 18rem;">
+           <div class="card text-black marti-cards" style="width: 15rem; height: 15rem; margin-top: 10px;">
                <div class="card-header text-center">
                    <h3><a href="/{{ miniapp.id }}">{{ miniapp.name }}</a></h3>
+
                </div>
                <div class="card-body">
                    <p class="card-text">
+                       <p>{{ miniapp.description }}</p>
                    </p>
                </div>
            </div>

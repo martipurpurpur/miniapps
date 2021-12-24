@@ -1,0 +1,15 @@
+
+{% extends "homepage/layout/base.html" %}
+{% block content %}
+    <h2>{{ name }}</h2>
+    <p>{{ description|safe }}</p>
+    <form method="POST" action="/random">
+        <input type="number" min="0" max="100" name="min_rand" id="min">
+        <label for="min">От</label>
+        <input type="number" min="0" max="100" name="max_rand" id="max">
+        <label for="max">До</label>
+        <input type="submit" value="Сгенерировать число">
+    </form>
+    <br>
+    <a href="/">На главную</a>
+{% endblock %}

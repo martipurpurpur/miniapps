@@ -1,3 +1,4 @@
+
 miniapp_db = [
     {
     'id': 0,

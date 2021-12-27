@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'homepage',
     'miniapp',
-    'services'
+    'services',
+    'miniapps.apps.MiniAppConfig'
 ]
 
 MIDDLEWARE = [

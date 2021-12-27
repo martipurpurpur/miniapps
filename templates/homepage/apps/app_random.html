@@ -2,8 +2,9 @@
 {% extends "homepage/layout/base.html" %}
 {% block content %}
     <h2>{{ name }}</h2>
-    <p>{{ description|safe }}</p>
-    <form method="POST" action="/random">
+    <p>{{ description }}</p>
+    <form method="POST" action="../{{ id }}/">
+        {% csrf_token %}
         <input type="number" min="0" max="100" name="min_rand" id="min">
         <label for="min">От</label>
         <input type="number" min="0" max="100" name="max_rand" id="max">

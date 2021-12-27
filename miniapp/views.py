@@ -6,7 +6,9 @@ from services import *
 def miniapp(request, pk):
     name = miniapp_db[pk]['name']
     description = miniapp_db[pk]['description']
+    id = pk
     context = {
+        'id': id,
         'name': name,
         'description': description,
     }

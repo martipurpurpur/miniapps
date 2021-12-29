@@ -3,7 +3,7 @@
 {% block content %}
     <h2>{{ name }}</h2>
     <p>{{ description }}</p>
-    <form method="POST" action="../{{ id }}/">
+    <form method="POST" action="/randomizer/update/">
         {% csrf_token %}
         <input type="number" min="0" max="100" name="min_rand" id="min">
         <label for="min">От</label>
@@ -11,6 +11,7 @@
         <label for="max">До</label>
         <input type="submit" value="Сгенерировать число">
     </form>
+    <h3>{{ result }}</h3>
     <br>
     <a href="/">На главную</a>
 {% endblock %}

@@ -1,0 +1,15 @@
+
+{% extends "homepage/layout/base.html" %}
+{% block content %}
+    <h2>{{ name }}</h2>
+    <p>{{ description }}</p>
+    <form method="POST" action="/encoder/update/">
+        {% csrf_token %}
+        <input type="text" name="rot" id="rot">
+        <label for="rot">Text</label>
+        <input type="submit" value="Encode">
+    </form>
+    <h3>{{ result }}</h3>
+    <br>
+    <a href="/">Home</a>
+{% endblock %}

@@ -1,0 +1,17 @@
+
+{% extends "homepage/layout/base.html" %}
+{% block content %}
+    <h2>{{ name }}</h2>
+    <p>{{ description }}</p>
+    <form method="POST" action="/randomizer/update/">
+        {% csrf_token %}
+        <input type="number" min="0" max="100" name="min_rand" id="min">
+        <label for="min">From</label>
+        <input type="number" min="0" max="100" name="max_rand" id="max">
+        <label for="max">To</label>
+        <input type="submit" value="Get">
+    </form>
+    <h3>{{ result }}</h3>
+    <br>
+    <a href="/">Home</a>
+{% endblock %}

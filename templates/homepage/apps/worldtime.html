@@ -1,0 +1,15 @@
+
+{% extends "homepage/layout/base.html" %}
+{% block content %}
+    <h2>{{ name }}</h2>
+    <p>{{ description }}</p>
+    <form method="POST" action="/worldtime/update/">
+        {% csrf_token %}
+        <input type="text" min="0" max="255" name="city" id="city">
+        <label for="city">City</label>
+        <input type="submit" value="Get">
+    </form>
+    <h3>{{ result }}</h3>
+    <br>
+    <a href="/">Home</a>
+{% endblock %}

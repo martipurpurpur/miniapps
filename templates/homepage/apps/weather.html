@@ -6,10 +6,10 @@
     <form method="POST" action="/weather/update/">
         {% csrf_token %}
         <input type="text" min="0" max="255" name="city" id="city">
-        <label for="city">город</label>
-        <input type="submit" value="Узнать погоду">
+        <label for="city">City</label>
+        <input type="submit" value="Get">
     </form>
 <h3>{{ result }}</h3>
     <br>
-    <a href="/">На главную</a>
+    <a href="/">Home</a>
 {% endblock %}

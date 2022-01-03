@@ -4,7 +4,7 @@ from services.get_app_data import get_app_data
 from .models import MiniApp
 
 
-def miniapp(request, slug):
+def miniapp_get(request, slug):
     app = MiniApp.objects.get(slug=slug)
     name = app.name
     slug = app.slug

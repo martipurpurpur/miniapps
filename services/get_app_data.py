@@ -1,6 +1,7 @@
 
 from miniapps.models import MiniApp
 from random import randint
+import codecs
 import requests
 
 def get_app_data(params, slug):
@@ -10,6 +11,10 @@ def get_app_data(params, slug):
         result = weather(params)
     elif slug == 'telegrambot':
         result = telegrambot(params)
+    elif slug == 'worldtime':
+        result = worldtime(params)
+    elif slug == 'encoder':
+        result = encoder(params)
     else:
         result = None
     return result
@@ -20,8 +25,8 @@ def worldtime(params):
     return result
 
 def randomizer(params):
-    min = int(params['min_rand'][0])
-    max = int(params['min_rand'][0])
+    min = int(params['min_rand'])
+    max = int(params['max_rand'])
     result = randint(min, max)
     return result
 
@@ -29,8 +34,13 @@ def telegrambot(params):
     result = params
     return result
 
+def encoder(params):
+    text = params['rot']
+    result = codecs.encode(text, 'rot13')
+    return result
+
 def weather(params):
-    city = params['city'][0]
+    city = params['city']
     url = f'https://wttr.in/{city}'
     weather_parameters = {
         'format': 2,

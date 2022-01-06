@@ -1,8 +1,4 @@
 # Default ignored files
 /shelf/
 /multiapp/.idea/
-archive/
-.gitlab-ci.yml
 .idea/
-.pytest_cache
-__pycache__

@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'homepage',
     'services',
-    'miniapps.apps.MiniAppConfig'
+    'miniapps.apps.MiniAppConfig',
+    'sheduler.apps.ShedulerConfig'
 ]
 
 MIDDLEWARE = [

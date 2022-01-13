@@ -1,9 +1,9 @@
 FROM python:3.8-slim-buster
 # set work directory
-WORKDIR /bot
+WORKDIR /multiapp/sheduler/
 # copy project
-COPY . .
+COPY . /multiapp/sheduler/
 # install dependencies
 RUN pip install --user aiogram
 # run app
-CMD ["python", "Scheduler.py"]
+CMD ["python", "sheduler\Sheduler.py"]

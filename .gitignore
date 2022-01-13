@@ -2,3 +2,6 @@
 /shelf/
 /multiapp/.idea/
 .idea/
+allure/
+allure-results/
+.pytest_cache
